@@ -18,3 +18,12 @@ def Score(inpString):
         return 2
     elif(pair[0] == "C" and pair[1] == "Z"):
         return 6
+
+input = open("input.txt")
+lines = input.read().splitlines()
+
+totalScore = 0
+for line in lines:
+    totalScore += Score(line)
+
+print(totalScore)
